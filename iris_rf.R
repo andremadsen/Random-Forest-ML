@@ -41,7 +41,7 @@ test.MLdata <- iris[-indexes,]
 RFmodel <- randomForest(Species ~ ., data=train.MLdata, ntree=1001, mtry=3, proximity=TRUE)
 RFmodel
 
-# Use the ML model 'RFmodel' to classify performance (test data)
+# Use the ML model 'RFmodel' to predict Species (in the unseen Test dataset)
 result <- predict(RFmodel, test.MLdata[,1:4], type="response")
 result
 a <- data.frame(test.MLdata$Species, result)
