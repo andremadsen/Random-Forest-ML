@@ -1,6 +1,7 @@
 # Download R: https://cran.r-project.org/bin/windows/base/
 # Download RStudio: https://www.rstudio.com/products/rstudio/download/#download
 
+# Copy/Paste the following code into RStudio (new Project)
 # Press CTRL+Enter to run each line of code below
 
 install.packages("caret")
