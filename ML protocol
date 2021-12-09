@@ -10,7 +10,7 @@ library(caret)
 install.packages("randomForest")
 library(randomForest)
 
-# Import data
+# Import data for supervised machine learning
 Data <- read.csv(file.choose(), header=T, sep=",", dec=".")
 
 # New dataframe containing the dependent variable to be classified and any number of feature variables
