@@ -13,7 +13,7 @@ library(randomForest)
 # Import data for supervised machine learning
 Data <- read.csv(file.choose(), header=T, sep=",", dec=".")
 
-# New dataframe containing the dependent variable to be classified and any number of feature variables
+# New dataframe containing the dependent response variable to be classified, and any number of pertinent feature variables
 New_Data <- data.frame(Data$DependentVar, Data$FeatureVar1, Data$FeatureVar2, Data$FeatureVar3, Data$FeatureVar4, Data$FeatureVar5, Data$FeatureVar6) 
 
 # Rename columns and remove 'NA' missing data
