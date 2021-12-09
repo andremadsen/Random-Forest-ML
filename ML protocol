@@ -16,6 +16,10 @@ Data <- read.csv(file.choose(), header=T, sep=",", dec=".")
 # New dataframe containing the dependent variable to be classified and any number of feature variables
 New_Data <- data.frame(Data$DependentVar, Data$FeatureVar1, Data$FeatureVar2, Data$FeatureVar3, Data$FeatureVar4, Data$FeatureVar5, Data$FeatureVar6) 
 
+# Rename columns and remove 'NA' missing data
+colnames(New_Data) <- c("DependentVar", "FeatureVar1", "FeatureVar2", "FeatureVar3", "FeatureVar4", "FeatureVar5", "FeatureVar6")
+New_Data <- na.omit(New_Data)
+
 # Split 'New_Data' into 'train' (75% of the rows) and 'test' (25% of the rows) subsets 
 indexes <- createDataPartition(New_Data$DependentVar, times = 1, p = 0.75, list = FALSE)
 train <- New_Data[indexes,]
